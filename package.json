@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "start": "ng serve --extra-webpack-config webpack.partial.js",
+    "build": "ng build --single-bundle --extra-webpack-config webpack.partial.js",
+    "watch": "ng build --watch --configuration development --extra-webpack-config webpack.partial.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "format": "prettier --check \"./**\"",
@@ -50,6 +50,8 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.3.5"
+    "ngx-build-plus": "12.2.0",
+    "typescript": "~4.3.5",
+    "webpack-assets-manifest": "^5.0.6"
   }
 }
