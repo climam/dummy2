@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "ng lint"
+    "format": "prettier --check \"./**\"",
+    "format:fix": "prettier --write \"./**\"",
+    "lint": "yarn format && ng lint"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +22,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "prettier": "^2.3.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
